@@ -368,6 +368,9 @@ instance Show (JsonRepr ('SchemaText cs)) where
 instance Show (JsonRepr ('SchemaNumber cs)) where
   show (ReprNumber n) = "ReprNumber " P.++ show n
 
+instance Show (JsonRepr 'SchemaBoolean) where
+  show (ReprBoolean n) = "ReprBoolean " P.++ show n
+
 instance Show (JsonRepr 'SchemaNull) where show _ = "ReprNull"
 
 instance Show (JsonRepr s) => Show (JsonRepr ('SchemaArray acs s)) where
